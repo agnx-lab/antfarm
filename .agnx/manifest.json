@@ -1,0 +1,28 @@
+{
+  "id": "antfarm",
+  "name": "Antfarm",
+  "version": "0.1.0",
+  "description": "Agnx 外置子应用：Antfarm 整仓 + 上游自带 dashboard（dist/server/daemon.js）",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./landing/logo.jpeg",
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-antfarm-dashboard.mjs",
+    "stateFile": "antfarm.json",
+    "defaultPort": 8105
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "capabilities": ["cookies"],
+    "preferStrategy": "auto"
+  },
+  "contributes": {
+    "commands": [{ "id": "antfarm.open", "title": "Antfarm" }],
+    "panels": [{ "id": "antfarm.main", "title": "Antfarm" }]
+  },
+  "platforms": { "desktop": "supported", "web": "supported", "mobile": "unsupported" }
+}

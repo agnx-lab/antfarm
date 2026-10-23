@@ -1,0 +1,11 @@
+{
+  "appId": "antfarm",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/snarktank/antfarm",
+    "commit": "a442ad7dcb8cf8746175cc4a2e2dcafd501156cf"
+  },
+  "updatedAt": "2026-10-19T00:00:00.000Z"
+}
